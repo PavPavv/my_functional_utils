@@ -5,6 +5,7 @@ import { frequenciesBy } from './modules/utils/frequenciesBy.js';
 import { groupBy } from './modules/utils/groupBy.js';
 import { update } from './modules/utils/update.js';
 import { nestedUpdate } from './modules/utils/nestedUpdate.js';
+import { arrRmv } from './modules/utils/arrRmv.js';
 
 const main = () => {
   const data1 = {
@@ -88,6 +89,10 @@ const main = () => {
   const test = nestedUpdate(cart, ['shirt', 'options', 'size'], (value) => {
     return 1000;
   });
-  console.log(test);
+  // console.log(test);
+
+  const a = [1,2,3,4,5];
+  const newArrR = arrRmv(a, 0);
+  console.log(newArrR);
 };
 main();
